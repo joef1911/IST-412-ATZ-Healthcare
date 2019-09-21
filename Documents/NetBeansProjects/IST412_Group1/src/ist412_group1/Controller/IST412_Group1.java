@@ -1,4 +1,5 @@
-package ist412_group1;
+
+package ist412_group1.Controller;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -8,10 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Dalton
- */
+
 public class IST412_Group1 extends Application {
     
     @Override
@@ -36,7 +34,7 @@ public class IST412_Group1 extends Application {
         primaryStage.show();
     }
 
- 
+
     public static void main(String[] args) {
         launch(args);
     }
