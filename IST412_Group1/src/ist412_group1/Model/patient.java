@@ -8,10 +8,15 @@ Interacts with
 */
 package ist412_group1.Model;
 
-/**
- *
- * @author Dalton
- */
+
+
 public class patient {
+    private String[] records;
+    String firstName;
+    String lastName;
     
+    public String getName(){
+        String a = firstName + lastName;
+        return a;
+    }
 }
