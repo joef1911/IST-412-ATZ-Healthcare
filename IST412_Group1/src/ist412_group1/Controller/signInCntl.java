@@ -1,10 +1,13 @@
-//Functionality controller of signInView
+/**Functionality controller of signInView
+Interacts with 
+-Controller.IST412_Group1
+-View.signInView
+-
+Controls signInView
+*/
 package ist412_group1.Controller;
 
-/**
- *
- * @author Dalton
- */
+
 public class signInCntl {
     
 }
