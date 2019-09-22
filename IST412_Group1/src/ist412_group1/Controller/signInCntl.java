@@ -2,7 +2,6 @@
 Interacts with 
 -Controller.IST412_Group1
 -View.signInView
--
 Controls signInView
 */
 package ist412_group1.Controller;
