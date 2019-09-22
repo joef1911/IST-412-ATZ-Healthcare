@@ -1,4 +1,7 @@
-//git Testing functionality
+/**Main Controller that interacts and initializes all other controllers
+Starting point of the Application
+Initializes signInView from the start of the app
+*/
 package ist412_group1.Controller;
 
 import javafx.application.Application;
@@ -14,24 +17,7 @@ public class IST412_Group1 extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
             
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 
 
