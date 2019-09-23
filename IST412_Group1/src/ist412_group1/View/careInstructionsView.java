@@ -1,8 +1,9 @@
-/**View layout of care instructions
-Controlled by
--Controller.careInstructionsViewCntl
-Initiated by
--Controller.IST412_Group1
+/**
+ * View layout of care instructions
+ * Controlled by
+ *      -Controller.careInstructionsViewCntl
+ * Initiated by
+ *      -Controller.IST412_Group1
 */
 
 
