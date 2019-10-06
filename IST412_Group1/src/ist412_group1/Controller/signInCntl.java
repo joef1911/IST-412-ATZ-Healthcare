@@ -13,7 +13,6 @@ public class signInCntl
 {
 
     private patient patientmodel;
-    private permission permissionmodel;
     private user usermodel;
 
     public signInCntl()
