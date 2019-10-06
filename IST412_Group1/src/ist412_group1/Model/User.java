@@ -7,8 +7,6 @@
 */
 package ist412_group1.Model;
 
-import java.util.ArrayList;
-
 public class User {
     private String type;
     String firstName;
@@ -28,6 +26,10 @@ public class User {
         lastName = b;
         userName = c;
         password = d;
+    }
+    
+    public String getFirstName(){
+        return firstName;
     }
     
     public String login(String a, String b){
