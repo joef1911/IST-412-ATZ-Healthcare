@@ -14,7 +14,6 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import ist412_group1.Model.*;
 import ist412_group1.View.*;
-import ist412_group1.testHarness.*;
 
 
 public class IST412_Group1 extends Application {
@@ -35,7 +34,6 @@ public class IST412_Group1 extends Application {
    
     public static void main(String[] args) {    
         informationViewCntl informationViewCntlObj = new informationViewCntl();
-        test testHarness = new test();
         launch(args);
     }
     
