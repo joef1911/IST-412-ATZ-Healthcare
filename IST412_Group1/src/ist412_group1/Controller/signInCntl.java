@@ -11,13 +11,11 @@ import ist412_group1.View.*;
 
 public class signInCntl
 {
-
-    private patient patientmodel;
-    private user usermodel;
+    private User usermodel;
 
     public signInCntl()
     {
-
+        
     }
 
 }
