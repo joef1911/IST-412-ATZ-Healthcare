@@ -12,6 +12,11 @@ public class patient {
     private String[] records;
     String firstName;
     String lastName;
+    
+    //Constructor in progress
+    public patient() {
+        
+    }
 
     /**
      * Getter for patient's record.
