@@ -8,63 +8,48 @@
 */
 package ist412_group1.Model;
 
+import java.util.ArrayList;
+
 public class patient {
-    private String[] records;
-    String firstName;
-    String lastName;
+    private ArrayList <String> patientData;
+    String patientId;
     
     //Constructor in progress
-    public patient() {
-        
+    public patient(ArrayList<String> patientData, String patientId) {
+        this.patientData = patientData;
+        this.patientId = patientId;
     }
 
     /**
      * Getter for patient's record.
-     * @return records
+     * @return patientData
      */
-    public String[] getRecords() {
-        return records;
+    public ArrayList<String> getPatientData() {
+        return patientData;
     }
 
     /**
      * Setter for patient's record.
-     * @param records 
+     * @param patientData 
      */
-    public void setRecords(String[] records) {
-        this.records = records;
-    }
-
-    /**
-     * Getter for patient's first name.
-     * @return firstName
-     */
-    public String getFirstName() {
-        return firstName;
-    }
-
-    /**
-     * Setter for patient's first name.
-     * @param firstName 
-     */
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    /**
-     * Getter for patient's last name
-     * @return lastName
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * Setter for patient's last name.
-     * @param lastName 
-     */
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setRecords(ArrayList<String> patientData) {
+        this.patientData = patientData;
     }
     
+    /**
+     * Getter for patient's record.
+     * @return patientId
+     */
+    public String getPatientId() {
+        return patientId;
+    }
+    
+    /**
+     * Setter for patient's record.
+     * @param patientId 
+     */
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }    
     
 }
