@@ -15,14 +15,20 @@ import static javafx.application.Application.launch;
 
 
 public class test {
+        private signInCntl sign = new signInCntl();
     
-    
+
+        
     
     
     
      public static void main(String[] args) {       
         launch(args);
     }
+     
+     private void testSignIn(){
+         
+     }
      
      
 
