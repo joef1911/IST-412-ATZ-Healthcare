@@ -23,11 +23,14 @@ public class test {
     
     
      public static void main(String[] args) {  
-         testSignIn();
-        launch(args);
+         testDataBase();
     }
      
-     private static void testSignIn(){
+     public test(){
+         testDataBase();
+     }
+     
+     private static void testDataBase(){
          if(base != null){
              System.out.println("Database is Populated");
                 if(base.getDataBase().get(1).getFirstName() != null){
@@ -40,8 +43,6 @@ public class test {
          else{
              System.out.println("Database not populated");
          }
-     }
-     
-     
+     }  
 
 }
