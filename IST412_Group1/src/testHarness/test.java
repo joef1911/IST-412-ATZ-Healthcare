@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 package testHarness;
+import ist412_group1.Controller.*;
+import ist412_group1.Model.*;
+import ist412_group1.View.*;
 import static javafx.application.Application.launch;
-
-
 /**
  *
  * @author Dalton
