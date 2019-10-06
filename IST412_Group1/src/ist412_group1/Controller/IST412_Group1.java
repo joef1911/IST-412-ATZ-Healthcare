@@ -24,14 +24,15 @@ public class IST412_Group1 extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-            
+        
     }
 
     /**
-     * This is the main method.
+     * This is the main method. It instantiates informationViewCntl.
      * @param args 
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {       
+        informationViewCntl informationViewCntlObj = new informationViewCntl();
         launch(args);
     }
     
