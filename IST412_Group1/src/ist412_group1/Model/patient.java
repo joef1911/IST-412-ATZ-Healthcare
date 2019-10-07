@@ -12,9 +12,13 @@ import java.util.ArrayList;
 
 public class patient {
     private ArrayList <String> patientData;
-    String patientId;
+    String patientId;   
     
-    //Constructor in progress
+    /**
+     * This is the constructor for patient.
+     * @param patientData the arrayList with Strings of patient data
+     * @param patientId the string with patient id
+     */
     public patient(ArrayList<String> patientData, String patientId) {
         this.patientData = patientData;
         this.patientId = patientId;
