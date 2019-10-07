@@ -33,7 +33,9 @@ public class UnitTest {
         assertNotNull("User info Populated", firstName);
         User test = new User("Evan", "Trent", "eTrent", "etest");
         base.getDataBase().add(test);
-        assertEquals("User isn't logged in", 0, base.getDataBase().get(1).getLoggedIn());
+        assertEquals("User isn't logged in", 0, base.getDataBase().get(4).getLoggedIn());
+        base.authenticate(test);
+        assertEquals("User is logged in", 1, base.getDataBase().get(4).getLoggedIn());
     }
     
     @Test
