@@ -23,4 +23,17 @@ public class UserDataBase {
     public ArrayList<User> getDataBase(){
         return database;
     }
+    
+    public void authenticate(User a){
+        a.loggedIn = 0;
+        for(int i = 0; i < database.size(); i++){
+            if(a.getUserName() == database.get(i).getUserName() && a.getPassword() == database.get(i).getPassword()){
+                        a.loggedIn = 1;
+            }
+            else{
+                a.loggedIn = 0;
+            }
+        }
+
+    }
 }
