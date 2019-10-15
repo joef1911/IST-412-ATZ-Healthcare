@@ -32,6 +32,18 @@ public class User {
         return firstName;
     }
     
+    public String getUserName(){
+        return userName;
+    }
+    
+    public String getPassword(){
+        return password;
+    }
+    
+    public int getLoggedIn(){
+        return this.loggedIn;
+    }
+    
     public String login(String a, String b){
         
         if(a == userName && b ==password){
