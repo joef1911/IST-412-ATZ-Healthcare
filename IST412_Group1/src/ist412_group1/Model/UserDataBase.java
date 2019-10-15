@@ -26,12 +26,15 @@ public class UserDataBase {
     
     public void authenticate(User a){
         a.loggedIn = 0;
+        System.out.println("Authenticating");
         for(int i = 0; i < database.size(); i++){
-            if(a.getUserName() == database.get(i).getUserName() && a.getPassword() == database.get(i).getPassword()){
+            if(a.getUserName().equals(database.get(i).getUserName()) && a.getPassword().equals(database.get(i).getPassword())){
                         a.loggedIn = 1;
+                        System.out.println("Pass");
             }
             else{
                 a.loggedIn = 0;
+                System.out.println("Fail");
             }
         }
 
