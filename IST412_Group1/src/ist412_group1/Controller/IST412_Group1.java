@@ -4,37 +4,90 @@
  * Initializes signInView from the start of the app.
  */
 package ist412_group1.Controller;
-
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import ist412_group1.Model.*;
-import ist412_group1.View.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 
 
 public class IST412_Group1 extends Application {
-    
-    /**
-     * This is the methods that starts the UI.
-     * @param primaryStage 
-     */
+    UserDataBase data = new UserDataBase(this);
+    PatientDatabase patDat = new PatientDatabase(this);
+    signInCntl signIn = new signInCntl(this);
+    informationViewCntl infoCntl = new informationViewCntl(this);
+    careInstructionsViewCntl careCntl = new careInstructionsViewCntl(this);
+    int oneUserLoggedIn = 0;
+    Stage mainStage;
+    public static void main(String[] args) 
+    {
+        Application.launch(args);
+    }
+     
     @Override
-    public void start(Stage primaryStage) {
-        
-    }
+    public void start(Stage stage) throws Exception
+    {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/signInView.fxml"));
+        loader.setController(signIn);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);    
+        stage.setScene(scene);
+        stage.show(); 
 
-    /**
-     * This is the main method. It instantiates informationViewCntl.
-     * @param args 
-     */
-   
-    public static void main(String[] args) {    
-        informationViewCntl informationViewCntlObj = new informationViewCntl();
-        launch(args);
     }
+    
+   public void startCareInstructionsView(Stage stage) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/careInstructionsView.fxml"));
+        loader.setController(careCntl);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);    
+        stage.setScene(scene);
+        stage.show();
+   }
+   
+   public void startEditInfoView(Stage stage) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/editInfoView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);    
+        stage.setScene(scene);
+        stage.show();
+   }
+   
+      public void startInformationView(Stage stage) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/informationView.fxml"));
+        loader.setController(infoCntl);
+        Parent root = loader.load();
+        Scene scene = new Scene(root);    
+        System.out.println(stage);
+        System.out.println(scene);
+        stage.setScene(scene);
+        stage.show();
+   }
+      
+      public void proceedToInformation() throws Exception{
+          startInformationView(mainStage);
+      }
+      
+      public void authenticate(String a, String b) throws Exception{
+          data.authenticate(a, b);
+      }
+      
+      public void setLoggedIn(){
+          oneUserLoggedIn = 1;
+      }
+      
+      public void passStage(Stage stage){
+          mainStage = stage;
+      }
+    
+      public void fullLogout(){
+          data.fullLogout();
+      }
+      
+      public patient passPatient(int a){
+          return patDat.getPatient(a);
+      }
+
     
 }

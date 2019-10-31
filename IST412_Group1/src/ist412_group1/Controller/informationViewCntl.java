@@ -8,21 +8,51 @@
 */
 package ist412_group1.Controller;
 
-/**
- *
- * @author Dalton
- */
+
 import ist412_group1.Model.*;
-import ist412_group1.View.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class informationViewCntl {
     
+    IST412_Group1 main;
+    @FXML Button careInstructBut;
+    @FXML Button logoutBut;
+    @FXML Button editInfoBut;
+    @FXML AnchorPane ap;
+    @FXML Text patientNameText;
+    @FXML Text patientHeightText;
+    @FXML Text patientWeightText;
     
-    /**
-     * Constructor for informationViewCntl
-     * Instantiates and defines the 3 basic patient objects
-     */
     public informationViewCntl() { 
-        PatientDatabase patientDatabase = new PatientDatabase();       
+       
     }
+    
+        public informationViewCntl(IST412_Group1 a) { 
+        main = a;    
+        populateText();
+    }
+        
+        public void populateText(){
+           patient a = main.passPatient(1);
+           System.out.println(a.getPatientName());
+           patientNameText.setText(a.getPatientName()); //not working
+           patientWeightText.setText(a.getPatientWeight());
+           System.out.println(patientWeightText);
+        }
+        
+        @FXML
+        public void logout(ActionEvent e){
+            main.fullLogout();
+            System.exit(0);
+        }
+        
+        @FXML
+        public void viewCareInstructions(ActionEvent e) throws Exception{
+            main.startCareInstructionsView((Stage)ap.getScene().getWindow());
+        }
 }

@@ -13,6 +13,7 @@ public class User {
     String lastName;
     String userName;
     String password;
+    int patientLink;
     int loggedIn = 0;
     
     /**
@@ -21,11 +22,12 @@ public class User {
      * @param b the password
      * @return a - username
      */
-    public User(String a, String b, String c, String d){
+    public User(String a, String b, String c, String d, int e){
         firstName = a;
         lastName = b;
         userName = c;
         password = d;
+        patientLink = e;
     }
     
     public String getFirstName(){
