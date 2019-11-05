@@ -20,6 +20,8 @@ public class PatientDatabase {
         main = a;
         patient patientOne = new patient("Damien Marco", "1", "110/80", "145", "High", "None", "Heart disease", "None", "Peanut Butter", "Smoking");
         patient patientTwo = new patient("Angela Becker", "2", "128/80", "172", "Low", "Laser Eye Surgery", "None", "Anti-Depressats", "None", "None");
+        patientOne.setCareInstructions("Stop Smoking");
+        patientTwo.setCareInstructions("Take Anti Depressants twice a day");
         patientData.add(patientOne);
         patientData.add(patientTwo);       
     }
@@ -27,7 +29,7 @@ public class PatientDatabase {
     public patient getPatient(int a){
         return patientData.get(a);
     }
-
+    
 
     
 }

@@ -25,8 +25,11 @@ public class informationViewCntl {
     @FXML Button editInfoBut;
     @FXML AnchorPane ap;
     @FXML Text patientNameText;
-    @FXML Text patientHeightText;
+    @FXML Text patientCurrentMedsText;
     @FXML Text patientWeightText;
+    @FXML Text careInstructionsText;
+    @FXML Text familyPatterns;
+    patient patData;
     
     public informationViewCntl() { 
        
@@ -34,15 +37,15 @@ public class informationViewCntl {
     
         public informationViewCntl(IST412_Group1 a) { 
         main = a;    
-        populateText();
+        patData = main.passPatient();
     }
         
         public void populateText(){
-           patient a = main.passPatient(1);
-           System.out.println(a.getPatientName());
-           patientNameText.setText(a.getPatientName()); //not working
-           patientWeightText.setText(a.getPatientWeight());
-           System.out.println(patientWeightText);
+           patientNameText.setText(patData.getPatientName()); //not working
+           patientWeightText.setText(patData.getPatientWeight());
+           patientCurrentMedsText.setText(patData.getPatientCurrentMedications());
+           careInstructionsText.setText(patData.getCareInstructions());
+           familyPatterns.setText("Family Patterns: " + patData.getPatientFamilyPatterns());
         }
         
         @FXML
@@ -54,5 +57,10 @@ public class informationViewCntl {
         @FXML
         public void viewCareInstructions(ActionEvent e) throws Exception{
             main.startCareInstructionsView((Stage)ap.getScene().getWindow());
+        }
+        
+        @FXML
+        public void viewEditInfo(ActionEvent e) throws Exception{
+            main.startEditInfoView((Stage)ap.getScene().getWindow());
         }
 }

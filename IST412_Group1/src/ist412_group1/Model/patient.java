@@ -21,6 +21,7 @@ public class patient {
         String patientCurrentMedications;
         String patientAllergies;
         String patientCurrentHabits;
+        String careInstructions;
 
     public patient(String patientName, String patientId, String patient1BloodPressure, String patient1Weight, String patient1ActivityLvl, String patient1PastIssues, String patient1FamilyPatterns, String patient1CurrentMedications, String patient1Allergies, String patient1CurrentHabits) {
         this.patientId = patientId;
@@ -115,7 +116,13 @@ public class patient {
         this.patientCurrentHabits = patientCurrentHabits;
     }
     
+    public void setCareInstructions(String a){
+        careInstructions = a;
+    }
       
+    public String getCareInstructions(){
+        return careInstructions;
+    }
 
 
 

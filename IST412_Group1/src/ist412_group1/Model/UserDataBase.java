@@ -49,4 +49,8 @@ public class UserDataBase {
              database.get(i).loggedIn = 0;
          }
     }
+    
+    public int returnSize(){
+        return database.size();
+    }
 }

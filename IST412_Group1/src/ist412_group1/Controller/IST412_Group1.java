@@ -18,6 +18,7 @@ public class IST412_Group1 extends Application {
     signInCntl signIn = new signInCntl(this);
     informationViewCntl infoCntl = new informationViewCntl(this);
     careInstructionsViewCntl careCntl = new careInstructionsViewCntl(this);
+    editInfoViewCntl editCntl = new editInfoViewCntl(this);
     int oneUserLoggedIn = 0;
     Stage mainStage;
     public static void main(String[] args) 
@@ -44,14 +45,17 @@ public class IST412_Group1 extends Application {
         Scene scene = new Scene(root);    
         stage.setScene(scene);
         stage.show();
+        populateCareInstructions();
    }
    
    public void startEditInfoView(Stage stage) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/editInfoView.fxml"));
+        loader.setController(editCntl);
         Parent root = loader.load();
         Scene scene = new Scene(root);    
         stage.setScene(scene);
         stage.show();
+        //add text box populations
    }
    
       public void startInformationView(Stage stage) throws Exception{
@@ -63,6 +67,7 @@ public class IST412_Group1 extends Application {
         System.out.println(scene);
         stage.setScene(scene);
         stage.show();
+        populateViewText();
    }
       
       public void proceedToInformation() throws Exception{
@@ -85,8 +90,23 @@ public class IST412_Group1 extends Application {
           data.fullLogout();
       }
       
-      public patient passPatient(int a){
-          return patDat.getPatient(a);
+      public patient passPatient(){
+//          for(int i = 0; i < data.returnSize(); i++){
+//              if(data.getDataBase().get(i).getLoggedIn() == 1){
+//                  return patDat.getPatient(i);
+//              }
+//          }
+//Further Implementation above for finalization of project
+          System.out.println(patDat.getPatient(1).getPatientName());
+           return patDat.getPatient(1);
+      }
+      
+      public void populateViewText(){
+          infoCntl.populateText();
+      }
+      
+      public void populateCareInstructions(){
+          careCntl.populateText();
       }
 
     

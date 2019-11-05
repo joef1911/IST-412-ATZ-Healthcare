@@ -1,0 +1,6 @@
+IST 412 Group 1 -dms6298 Dalton Sydnor Design Implementations
+Singleton Design
+The singleton design was implemented with the main controller (IST412_Group1), the user and patient databases. These classes only have one occurence. The main cntl is passed to all the other controllers so re-initialization doesnt have to occur. This allows for one controller to maintain control over the app during the apps runtime. The databases are created within the main controller and all data required is passed through the main controller.
+
+Tunneling Desing Pattern
+The tunneling interface design pattern is implemented through a streamlined UI shown in my code for the user. Doctors view isn't finished yet. The users UI however follows one line. Starting with a basic overview. This basic overview shows the majority of what the user might want and if more detail is required it is clear that the care instructions button will dive deeper into the doctors instructions. The users use pattern will follow sign-in, main overview, and lastly the deep dive for care instructions.s
