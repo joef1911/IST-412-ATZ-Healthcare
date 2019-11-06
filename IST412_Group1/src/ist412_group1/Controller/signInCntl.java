@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class signInCntl implements Initializable
@@ -22,6 +23,7 @@ public class signInCntl implements Initializable
     @FXML TextField enterUserName;
     @FXML TextField enterPassword;
     @FXML AnchorPane ap;
+    @FXML Text feedbackText;
     
         public signInCntl(IST412_Group1 a)
     {
@@ -49,7 +51,9 @@ public class signInCntl implements Initializable
     }
 
     
-
+    public void setFeedbackText(String text) {
+        feedbackText.setText(text);
+    }
     
 
 

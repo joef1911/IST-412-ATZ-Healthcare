@@ -109,5 +109,7 @@ public class IST412_Group1 extends Application {
           careCntl.populateText();
       }
 
-    
+    public void setFeedbackText(String text) {
+          signIn.setFeedbackText(text);
+      }
 }

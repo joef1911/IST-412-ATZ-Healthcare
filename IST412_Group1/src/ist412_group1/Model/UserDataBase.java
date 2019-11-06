@@ -33,11 +33,13 @@ public class UserDataBase {
                         database.get(i).loggedIn = 1;
                         System.out.println("Pass");
                         main.setLoggedIn();
+                        main.setFeedbackText("Sign in successful!");
                         main.proceedToInformation();
             }
             else{
                 System.out.println(database.get(i).getUserName() + a);
                 System.out.println(database.get(i).getPassword() + b);
+                main.setFeedbackText("Username or password invalid, credentials can be found in readme file");
                 System.out.println("Fail");
             }
         }
