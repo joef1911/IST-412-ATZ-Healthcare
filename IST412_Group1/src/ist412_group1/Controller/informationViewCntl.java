@@ -41,7 +41,7 @@ public class informationViewCntl {
     }
         
         public void populateText(){
-           patientNameText.setText(patData.getPatientName()); //not working
+           patientNameText.setText(patData.getPatientName());
            patientWeightText.setText(patData.getPatientWeight());
            patientCurrentMedsText.setText(patData.getPatientCurrentMedications());
            careInstructionsText.setText(patData.getCareInstructions());
@@ -61,6 +61,16 @@ public class informationViewCntl {
         
         @FXML
         public void viewEditInfo(ActionEvent e) throws Exception{
-            main.startEditInfoView((Stage)ap.getScene().getWindow());
+            if(main.passUser().checkPerm() == 1){
+               main.startEditInfoView((Stage)ap.getScene().getWindow()); 
+            }
+            else{
+                //add notification of not permitted
+            }
+        }
+        
+        @FXML
+        public void checkPermission() throws Exception{
+
         }
 }

@@ -30,6 +30,10 @@ public class PatientDatabase {
         return patientData.get(a);
     }
     
+    public void edit(int a, patient b){
+        patientData.set(a, b);
+    }
+    
 
     
 }

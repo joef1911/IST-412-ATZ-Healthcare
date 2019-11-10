@@ -15,6 +15,7 @@ public class User {
     String password;
     int patientLink;
     int loggedIn = 0;
+    int permLvl; //level 0 is typical user, level 1 is Doctors
     
     /**
      * This is the method that enables user to log in.
@@ -22,12 +23,13 @@ public class User {
      * @param b the password
      * @return a - username
      */
-    public User(String a, String b, String c, String d, int e){
+    public User(String a, String b, String c, String d, int e, int f){
         firstName = a;
         lastName = b;
         userName = c;
         password = d;
         patientLink = e;
+        permLvl = f;
     }
     
     public String getFirstName(){
@@ -53,4 +55,33 @@ public class User {
         }
         return a;
     }
+    
+    public int checkPerm(){
+        return permLvl;
+    }
+    
+    
+    //Doctors specialized behaviors, based on permLvl 1   
+    private void addBloodTestResult(int patientID){
+        
+    }
+    
+    private void addCTScanResult(int PatientID){
+        
+    }
+    
+    private void addUrinalysisResult(int PatientID){
+        
+    }
+    
+//    //Specified doctor's behavior according to type.
+//    public void doSpecializedBehavior(int patientID){
+//        if(type == 1){
+//            addBloodTestResult(patientID);
+//        } else if (type == 2){
+//            addCTScanResult(patientID);
+//        } else if(type == 3){
+//            addUrinalysisResult(patientID);
+//        }
+//    }
 }

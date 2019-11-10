@@ -19,6 +19,7 @@ public class IST412_Group1 extends Application {
     informationViewCntl infoCntl = new informationViewCntl(this);
     careInstructionsViewCntl careCntl = new careInstructionsViewCntl(this);
     editInfoViewCntl editCntl = new editInfoViewCntl(this);
+    User activeUser;
     int oneUserLoggedIn = 0;
     Stage mainStage;
     public static void main(String[] args) 
@@ -55,7 +56,7 @@ public class IST412_Group1 extends Application {
         Scene scene = new Scene(root);    
         stage.setScene(scene);
         stage.show();
-        //add text box populations
+        editCntl.populateText();
    }
    
       public void startInformationView(Stage stage) throws Exception{
@@ -78,8 +79,10 @@ public class IST412_Group1 extends Application {
           data.authenticate(a, b);
       }
       
-      public void setLoggedIn(){
+      public void setLoggedIn(User a){
           oneUserLoggedIn = 1;
+          activeUser = a;
+          
       }
       
       public void passStage(Stage stage){
@@ -121,4 +124,16 @@ public class IST412_Group1 extends Application {
         alert.setContentText("You have been logged out.");
         alert.showAndWait();
     }
+    
+    public User passUser(){
+        return activeUser;
+    }
+    
+    public void dataUpdate(int a, patient b){
+        patDat.edit(a, b);
+    }
+    
+//    public void deleteOldRecord(int a){
+//        patDat.deleteOldRecord(a);
+//    }
 }

@@ -12,10 +12,10 @@ public class UserDataBase {
     ArrayList<User> database = new ArrayList<User>();
     public UserDataBase(IST412_Group1 control){
         main = control;
-         User a = new User("Dalt", "Syd", "dsyd", "abc123", 1);
-         User b = new User("Rit", "Dice", "rDice", "abc567", 2);
-         User c = new User("Dan", "Smith", "dSmith", "qwe123", 1);
-         User d = new User("Rod", "Stew", "rStew", "rStew", 2);
+         User a = new User("Dalt", "Syd", "dsyd", "abc123", 1, 1);
+         User b = new User("Rit", "Dice", "rDice", "abc567", 2, 0);
+         User c = new User("Dan", "Smith", "dSmith", "qwe123", 1, 0);
+         User d = new User("Rod", "Stew", "rStew", "rStew", 2, 0);
          database.add(a);
          database.add(b);
          database.add(c);
@@ -32,7 +32,7 @@ public class UserDataBase {
             if(a.equals(database.get(i).getUserName()) && b.equals(database.get(i).getPassword())){
                         database.get(i).loggedIn = 1;
                         System.out.println("Pass");
-                        main.setLoggedIn();
+                        main.setLoggedIn(database.get(i));
                         main.setFeedbackText("Sign in successful!");
                         main.proceedToInformation();
             }
