@@ -31,7 +31,7 @@ public class signInCntl implements Initializable
       
     }
     
-        @FXML
+    @FXML
     public void submit(ActionEvent e) throws Exception{
         System.out.println(main);
         String b = enterUserName.getText();
@@ -41,20 +41,12 @@ public class signInCntl implements Initializable
     }
     
     
-        @Override
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
        
     }
-    
-    public signInCntl(){
         
-    }
-
-    
     public void setFeedbackText(String text) {
         feedbackText.setText(text);
     }
-    
-
-
 }

@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-
+import javafx.scene.control.Alert;
 
 public class IST412_Group1 extends Application {
     UserDataBase data = new UserDataBase(this);
@@ -35,7 +35,7 @@ public class IST412_Group1 extends Application {
         Scene scene = new Scene(root);    
         stage.setScene(scene);
         stage.show(); 
-
+        
     }
     
    public void startCareInstructionsView(Stage stage) throws Exception{
@@ -83,11 +83,12 @@ public class IST412_Group1 extends Application {
       }
       
       public void passStage(Stage stage){
-          mainStage = stage;
+        mainStage = stage;
       }
     
       public void fullLogout(){
           data.fullLogout();
+          showLogOutMsg();
       }
       
       public patient passPatient(){
@@ -112,4 +113,12 @@ public class IST412_Group1 extends Application {
     public void setFeedbackText(String text) {
           signIn.setFeedbackText(text);
       }
+    
+    private void showLogOutMsg() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Logout Update");
+        alert.setHeaderText(null);
+        alert.setContentText("You have been logged out.");
+        alert.showAndWait();
+    }
 }
