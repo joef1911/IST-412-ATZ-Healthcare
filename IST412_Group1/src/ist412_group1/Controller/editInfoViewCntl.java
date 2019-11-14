@@ -71,6 +71,7 @@ public class editInfoViewCntl {
         patData.setPatientWeight(weightText.getText());
         main.dataUpdate(Id - 1, patData);
         main.startInformationView((Stage)ap.getScene().getWindow());
+        main.showSuccessEditMsg();
     }
         
 
