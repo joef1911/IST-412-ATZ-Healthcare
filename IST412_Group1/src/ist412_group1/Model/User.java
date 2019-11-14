@@ -49,7 +49,6 @@ public class User {
     }
     
     public String login(String a, String b){
-        
         if(a == userName && b ==password){
             loggedIn = 1;
         }

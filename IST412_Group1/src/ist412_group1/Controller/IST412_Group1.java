@@ -125,7 +125,7 @@ public class IST412_Group1 extends Application {
         alert.showAndWait();
     }
     
-    private void showNonPermMsg() {                     //User doesn't have permission for edit info
+    public void showNonPermMsg() {                     //User doesn't have permission for edit info
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Permission Denied");
         alert.setHeaderText(null);
@@ -133,7 +133,7 @@ public class IST412_Group1 extends Application {
         alert.showAndWait();
     }
     
-    private void showSuccessEditMsg() {                 //User successfully edits info for patient
+    public void showSuccessEditMsg() {                 //User successfully edits info for patient
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Successful Edit");
         alert.setHeaderText(null);

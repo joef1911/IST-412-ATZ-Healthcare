@@ -65,12 +65,8 @@ public class informationViewCntl {
                main.startEditInfoView((Stage)ap.getScene().getWindow()); 
             }
             else{
-                //add notification of not permitted
+                main.showNonPermMsg();
             }
         }
         
-        @FXML
-        public void checkPermission() throws Exception{
-
-        }
 }
