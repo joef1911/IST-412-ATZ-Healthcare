@@ -19,7 +19,7 @@ public class PatientDatabase {
     public PatientDatabase(IST412_Group1 a) {
         main = a;
         patient patientOne = new patient("Damien Marco", "1", "110/80", "145", "High", "None", "Heart disease", "None", "Peanut Butter", "Smoking");
-        patient patientTwo = new patient("Angela Becker", "2", "128/80", "172", "Low", "Laser Eye Surgery", "None", "Anti-Depressats", "None", "None");
+        patient patientTwo = new patient("Angela Becker", "2", "128/80", "172", "Low", "Laser Eye Surgery", "None", "Anti-Depressants", "None", "None");
         patientOne.setCareInstructions("Stop Smoking");
         patientTwo.setCareInstructions("Take Anti Depressants twice a day");
         patientData.add(patientOne);
