@@ -33,15 +33,7 @@ public class AutocompleteTextField extends TextField {
     } 
     
     private void initWordBase() {
-        PatientDatabase p = new PatientDatabase(new IST412_Group1());
-        //patientCount Method Unavailable
-//        for(int i = 0; i< patientCount; i++) {
-//            patient patient = p.getPatient(i);
-//            element.add(patient.getPatientName());
-//            element.add(patient.getPatientId());
-//            
-//        }
-        
+        PatientDatabase p = new PatientDatabase(new IST412_Group1());        
     }
 
     private void startListen() {     
