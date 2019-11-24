@@ -29,6 +29,10 @@ public class informationViewCntl {
     @FXML Text patientWeightText;
     @FXML Text careInstructionsText;
     @FXML Text familyPatterns;
+    @FXML Text allergiesText;
+    @FXML Text habitsText;
+    @FXML Text activityLvlText;
+    @FXML Text pastIssuesText;
     patient patData;
     
     public informationViewCntl() { 
@@ -46,6 +50,10 @@ public class informationViewCntl {
            patientCurrentMedsText.setText(patData.getPatientCurrentMedications());
            careInstructionsText.setText(patData.getCareInstructions());
            familyPatterns.setText("Family Patterns: " + patData.getPatientFamilyPatterns());
+           allergiesText.setText(patData.getPatientAllergies());
+           activityLvlText.setText(patData.getPatientActivityLvl());
+           habitsText.setText(patData.getPatientCurrentHabits());
+           pastIssuesText.setText(patData.getPatientPastIssues());
         }
         
         @FXML
