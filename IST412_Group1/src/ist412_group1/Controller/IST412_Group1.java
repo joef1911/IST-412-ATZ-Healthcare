@@ -19,6 +19,7 @@ public class IST412_Group1 extends Application {
     informationViewCntl infoCntl = new informationViewCntl(this);
     careInstructionsViewCntl careCntl = new careInstructionsViewCntl(this);
     editInfoViewCntl editCntl = new editInfoViewCntl(this);
+    doctorsPageCntl taskCntl = new doctorsPageCntl(this);
     User activeUser;
     int oneUserLoggedIn = 0;
     Stage mainStage;
@@ -71,6 +72,16 @@ public class IST412_Group1 extends Application {
         populateViewText();
    }
       
+      public void startDoctorsPage(Stage stage) throws Exception{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/doctorsPageView.fxml"));
+        loader.setController(taskCntl);                                                                   
+        Parent root = loader.load();
+        Scene scene = new Scene(root);    
+        stage.setScene(scene);
+        stage.show();
+        taskCntl.populateText();
+   }
+      
       public void proceedToInformation() throws Exception{
           startInformationView(mainStage);
       }
@@ -95,12 +106,6 @@ public class IST412_Group1 extends Application {
       }
       
       public patient passPatient(){
-//          for(int i = 0; i < data.returnSize(); i++){
-//              if(data.getDataBase().get(i).getLoggedIn() == 1){
-//                  return patDat.getPatient(i);
-//              }
-//          }
-//Further Implementation above for finalization of project
           System.out.println(patDat.getPatient(1).getPatientName());
            return patDat.getPatient(1);
       }
@@ -125,7 +130,7 @@ public class IST412_Group1 extends Application {
         alert.showAndWait();
     }
     
-    public void showNonPermMsg() {                     //User doesn't have permission for edit info
+    public void showNonPermMsg() {                     
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Permission Denied");
         alert.setHeaderText(null);
@@ -133,7 +138,7 @@ public class IST412_Group1 extends Application {
         alert.showAndWait();
     }
     
-    public void showSuccessEditMsg() {                 //User successfully edits info for patient
+    public void showSuccessEditMsg() {                
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Successful Edit");
         alert.setHeaderText(null);
@@ -149,7 +154,4 @@ public class IST412_Group1 extends Application {
         patDat.edit(a, b);
     }
     
-//    public void deleteOldRecord(int a){
-//        patDat.deleteOldRecord(a);
-//    }
 }
