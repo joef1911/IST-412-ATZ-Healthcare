@@ -30,16 +30,12 @@ public class UserDataBase {
                         database.get(i).loggedIn = 1;
                         System.out.println("Pass");
                         main.setLoggedIn(database.get(i));
-                        main.setFeedbackText("Sign in successful!");
                         main.proceedToInformation();
             }
             else{
                 System.out.println(database.get(i).getUserName() + a);
                 System.out.println(database.get(i).getPassword() + b);
                 System.out.println("Fail");
-                if(i == database.size() - 1){
-                    main.showLoginError();
-                }
             }
             
         }
