@@ -8,14 +8,10 @@ package ist412_group1.Model;
 import ist412_group1.Controller.IST412_Group1;
 import java.util.ArrayList;
 
-/**
- *
- * @author Joe Fleck
- */
 public class PatientDatabase {
 
-    ArrayList<patient> patientData = new ArrayList<patient>();
-   IST412_Group1 main;
+   private ArrayList<patient> patientData = new ArrayList<patient>();
+   private final IST412_Group1 main;
     public PatientDatabase(IST412_Group1 a) {
         main = a;
         patient patientOne = new patient("Damien Marco", "1", "110/80", "145", "High", "None", "Heart disease", "None", "Peanut Butter", "Smoking");

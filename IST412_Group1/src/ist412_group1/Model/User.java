@@ -16,13 +16,7 @@ public class User {
     int patientLink;
     int loggedIn = 0;
     int permLvl; //level 0 is typical user, level 1 is Doctors
-    
-    /**
-     * This is the method that enables user to log in.
-     * @param a the username
-     * @param b the password
-     * @return a - username
-     */
+
     public User(String a, String b, String c, String d, int e, int f){
         firstName = a;
         lastName = b;

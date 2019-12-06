@@ -22,6 +22,7 @@ public class patient {
         String patientAllergies;
         String patientCurrentHabits;
         String careInstructions;
+        ArrayList<String> tasks = new ArrayList<String>();
 
     public patient(String patientName, String patientId, String patient1BloodPressure, String patient1Weight, String patient1ActivityLvl, String patient1PastIssues, String patient1FamilyPatterns, String patient1CurrentMedications, String patient1Allergies, String patient1CurrentHabits) {
         this.patientId = patientId;
@@ -122,6 +123,23 @@ public class patient {
       
     public String getCareInstructions(){
         return careInstructions;
+    }
+    
+    public String getTasks(){
+        String a = "";
+        if(tasks.isEmpty()){
+            a = "No Current Tasks";
+        }
+        else{
+            for(int i = 0; i < tasks.size(); i++){
+                a = a + "\r\n" + tasks.get(i);
+            }
+        }
+        return a;
+    }
+    
+    public void assignTasks(String a){
+        tasks.add(a);
     }
 
 

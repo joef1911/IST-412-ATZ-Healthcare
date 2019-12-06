@@ -2,14 +2,11 @@ package ist412_group1.Model;
 
 import ist412_group1.Controller.IST412_Group1;
 import java.util.ArrayList;
-import ist412_group1.Model.User;
-/**
- *
- * @author Dalton
- */
+
 public class UserDataBase {
-    IST412_Group1 main;
-    ArrayList<User> database = new ArrayList<User>();
+    private final IST412_Group1 main;
+    private ArrayList<User> database = new ArrayList<User>();
+    
     public UserDataBase(IST412_Group1 control){
         main = control;
          User a = new User("Dalt", "Syd", "dsyd", "abc123", 1, 1);

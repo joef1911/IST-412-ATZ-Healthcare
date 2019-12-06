@@ -13,10 +13,7 @@ import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-/**
- *
- * @author xiaohan
- */
+
 public class AutocompleteTextField extends TextField {
     // Word base
     private final SortedSet<String> element;

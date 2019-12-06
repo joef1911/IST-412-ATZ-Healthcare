@@ -22,17 +22,17 @@ public class informationViewCntl {
     IST412_Group1 main;
     @FXML Button careInstructBut;
     @FXML Button logoutBut;
-    @FXML Button editInfoBut;
+    @FXML Button doctorsPageBut;
     @FXML AnchorPane ap;
     @FXML Text patientNameText;
     @FXML Text patientCurrentMedsText;
     @FXML Text patientWeightText;
-    @FXML Text careInstructionsText;
     @FXML Text familyPatterns;
     @FXML Text allergiesText;
     @FXML Text habitsText;
     @FXML Text activityLvlText;
     @FXML Text pastIssuesText;
+    @FXML Text tasksText;
     patient patData;
     
     public informationViewCntl() { 
@@ -48,12 +48,12 @@ public class informationViewCntl {
            patientNameText.setText(patData.getPatientName());
            patientWeightText.setText(patData.getPatientWeight());
            patientCurrentMedsText.setText(patData.getPatientCurrentMedications());
-           careInstructionsText.setText(patData.getCareInstructions());
            familyPatterns.setText("Family Patterns: " + patData.getPatientFamilyPatterns());
            allergiesText.setText(patData.getPatientAllergies());
            activityLvlText.setText(patData.getPatientActivityLvl());
            habitsText.setText(patData.getPatientCurrentHabits());
            pastIssuesText.setText(patData.getPatientPastIssues());
+           tasksText.setText(patData.getTasks());
         }
         
         @FXML
@@ -68,13 +68,18 @@ public class informationViewCntl {
         }
         
         @FXML
-        public void viewEditInfo(ActionEvent e) throws Exception{
-            if(main.passUser().checkPerm() == 1){
-               main.startEditInfoView((Stage)ap.getScene().getWindow()); 
-            }
-            else{
-                main.showNonPermMsg();
-            }
+        public void viewDoctorsPage(ActionEvent e) throws Exception{
+            main.startDoctorsPage((Stage)ap.getScene().getWindow());
         }
+        
+//        @FXML
+//        public void viewEditInfo(ActionEvent e) throws Exception{
+//            if(main.passUser().checkPerm() == 1){
+//               main.startEditInfoView((Stage)ap.getScene().getWindow()); 
+//            }
+//            else{
+//                main.showNonPermMsg();
+//            }
+//        }
         
 }
