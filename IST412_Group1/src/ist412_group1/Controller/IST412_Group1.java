@@ -146,6 +146,14 @@ public class IST412_Group1 extends Application {
         alert.showAndWait();
     }
     
+        public void showLoginError() {                
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Failed Login");
+        alert.setHeaderText(null);
+        alert.setContentText("Wrong Username and Password");
+        alert.showAndWait();
+    }
+    
     public User passUser(){
         return activeUser;
     }

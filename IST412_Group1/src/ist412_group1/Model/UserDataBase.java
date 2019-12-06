@@ -36,9 +36,12 @@ public class UserDataBase {
             else{
                 System.out.println(database.get(i).getUserName() + a);
                 System.out.println(database.get(i).getPassword() + b);
-                main.setFeedbackText("Username or password invalid, credentials can be found in readme file");
                 System.out.println("Fail");
+                if(i == database.size() - 1){
+                    main.showLoginError();
+                }
             }
+            
         }
 
     }
